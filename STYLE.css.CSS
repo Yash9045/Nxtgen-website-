@@ -1,0 +1,633 @@
+/* --- CSS Reset & Global Theme Configurations --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Updated Theme Palette to match a standard Gold/Yellow logo contrast scheme */
+    --primary-color: #f59e0b;       /* Vibrant Gold / Amber accent tone */
+    --primary-hover: #d97706;       /* Slightly darker amber for interaction states */
+    --dark-bg: #0b0f19;             /* Slate dark space background styling */
+    --card-bg: #161f32;             /* Contrasting lighter blue-gray block cards */
+    --text-main: #f8fafc;           /* Primary white clarity reading text */
+    --text-muted: #94a3b8;          /* Accent description gray tones */
+    --accent-glow: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+    --font-stack: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Layout Architecture & Navigation --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(11, 15, 25, 0.9);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbarContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-main);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logopng1 img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-top: -25px;
+    margin-bottom: -22px;
+}
+
+.logoIcon {
+    color: var(--primary-color);
+}
+
+.logo .highlight {
+    background: var(--accent-glow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navMenu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover, .navLink.active {
+    color: var(--primary-color);
+}
+
+.ctaBtn {
+    background-color: var(--primary-color);
+    color: #0b0f19;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ctaBtn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* --- Hero Section Elements --- */
+.heroSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem 2rem;
+    background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+    text-align: center;
+}
+
+.heroContent {
+    max-width: 800px;
+}
+
+.heroContent h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.gradientText {
+    background: var(--accent-glow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroContent p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.heroBtns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.primaryBtn {
+    background-color: var(--primary-color);
+    color: #0b0f19;
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.primaryBtn:hover {
+    background-color: var(--primary-hover);
+}
+
+.secondaryBtn {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--primary-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+    background-color: rgba(245, 158, 11, 0.1);
+}
+
+/* --- About Segment --- */
+.aboutSection {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aboutContainer {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.aboutText h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.aboutText p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.directorCard {
+    background: var(--card-bg);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.directorIcon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.directorCard h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.directorCard .subtitle {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.directorCard .quote {
+    font-style: italic;
+    color: var(--text-main);
+}
+
+.statsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.statCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.statCard h3 {
+    font-size: 2.5rem;
+    background: var(--accent-glow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+/* --- Course Showcase Layout --- */
+.coursesSection {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionTitle h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sectionTitle p {
+    color: var(--text-muted);
+}
+
+.coursesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.courseCard {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.courseCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.courseIcon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.courseCard h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.courseSummary {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.courseDetails {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* --- New Contact Page Section Layout --- */
+.contactSection {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+}
+
+.contactContainer {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.contactInfoCard {
+    background-color: var(--card-bg);
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contactInfoCard h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contactInfoCard > p {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.infoDetailRow {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+    align-items: flex-start;
+}
+
+.infoDetailRow i {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    width: 45px;
+    text-align: center;
+}
+
+.infoDetailRow h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.infoDetailRow p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.mapCard {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 350px;
+}
+
+.mapCard iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #05070f;
+    padding: 4rem 2rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footerInfo {
+    max-width: 400px;
+}
+
+.footerInfo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footerInfo p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.socials a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.socials a:hover {
+    color: #0b0f19;
+    background-color: var(--primary-color);
+}
+
+.footerLinks h4 {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.footerLinks ul {
+    list-style: none;
+}
+
+.footerLinks li {
+    margin-bottom: 0.6rem;
+}
+
+.footerLinks a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footerLinks a:hover {
+    color: var(--primary-color);
+}
+
+.footerBottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- Modals --- */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 7, 15, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modalOverlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalBox {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalClose {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.modalClose:hover {
+    color: var(--text-main);
+}
+
+.modalBox h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.modalBox p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.formGroup {
+    margin-bottom: 1.2rem;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-muted);
+}
+
+.formGroup input, .formGroup select {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--dark-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+}
+
+.formGroup input:focus, .formGroup select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submitBtn {
+    width: 100%;
+    background: var(--primary-color);
+    color: #0b0f19;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* --- Fluid Responsive Layout Breakpoints --- */
+@media (max-width: 968px) {
+    .aboutContainer, .contactContainer {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .heroContent h1 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .navMenu {
+        position: fixed;
+        top: 4.8rem;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 4.8rem);
+        background-color: var(--dark-bg);
+        flex-direction: column;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        transition: left 0.4s ease;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .navMenu.active {
+        left: 0;
+    }
+    .heroBtns {
+        flex-direction: column;
+    }
+}

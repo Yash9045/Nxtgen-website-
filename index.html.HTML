@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Gen Computer Institute</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Modern Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="NG.png.png">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="navbarContainer">
+            <!-- LOGO AREA: Replace text with your image file path if needed -->
+            <a href="index.html" class="logo">
+                <i class="logopng1"><img src="NG.png.png" alt=""></i> NXT<span class="highlight">GEN</span>
+            </a>
+            <nav class="navMenu">
+                <a href="#home" class="navLink active">Home</a>
+                <a href="#about" class="navLink">About</a>
+                <a href="#courses" class="navLink">Courses</a>
+                <a href="#contact" class="navLink">Contact Us</a>
+                
+            </nav>
+            <div class="hamburger" id="hamburgerMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="heroSection">
+        <div class="heroContent">
+            <h1>Empower Your Future With <span class="gradientText">Next Gen Skills</span></h1>
+            <p>Join the ultimate learning ecosystem designed to transform beginners into industry-ready tech
+                professionals. Master coding, advanced management tools, and financial compliance systems.</p>
+            <div class="heroBtns">
+                <a href="#courses" class="primaryBtn">Explore Courses</a>
+                <button class="secondaryBtn openModalBtn">Get Free Counselling</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="aboutSection">
+        <div class="aboutContainer">
+            <div class="aboutText">
+                <h2>Shaping Digital Pioneers</h2>
+                <p>At Next Gen Computer Institute, we bridge the gap between academic theory and real-world execution.
+                    Our practical, lab-first curriculum ensures every student leaves with strong, employable skills.</p>
+
+                <div class="directorCard">
+                    <i class="fa-solid fa-user-tie directorIcon"></i>
+                    <div>
+                        <h4>Arun Kumar</h4>
+                        <p class="subtitle">Director, Next Gen Institute</p>
+                        <p class="quote">"Our mission is to democratize high-quality tech education and make every
+                            student industry-ready for modern commercial ecosystems."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="statsGrid">
+                <div class="statCard">
+                    <h3>10+</h3>
+                    <p>Professional Modules</p>
+                </div>
+                <div class="statCard">
+                    <h3>98%</h3>
+                    <p>Practical Lab Focus</p>
+                </div>
+                <div class="statCard">
+                    <h3>1500+</h3>
+                    <p>Students Certified</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Courses Section -->
+    <section id="courses" class="coursesSection">
+        <div class="sectionTitle">
+            <h2>Our Professional Programs & Summaries</h2>
+            <p>Pick a domain, master the tools, and fast-track your career goals.</p>
+        </div>
+
+        <div class="coursesGrid">
+            <!-- Course 1 -->
+            <div class="courseCard">
+                <div class="courseIcon"><i class="fa-solid fa-code"></i></div>
+                <h3>Coding Languages</h3>
+                <p class="courseSummary"><strong>Summary:</strong> Covers programming logic foundations, data
+                    structures, algorithm design, and building dynamic scripts.</p>
+                <p class="courseDetails">Learn foundational to intermediate logic layout using Python, C++, Java, and
+                    modern script frameworks. Includes building functional console programs and basic web applications.
+                </p>
+                <span class="badge">In Demand</span>
+            </div>
+            <!-- Course 2 -->
+            <div class="courseCard">
+                <div class="courseIcon"><i class="fa-solid fa-file-excel"></i></div>
+                <h3>Advanced Excel</h3>
+                <p class="courseSummary"><strong>Summary:</strong> High-level commercial data sorting, mathematical
+                    lookup tracking, and workflow macro automation.</p>
+                <p class="courseDetails">Deep dive into data analysis architectures, conditional macros, pivot tables,
+                    lookup arrays, interactive dashboards, and processing complex financial data strings cleanly.</p>
+                <span class="badge">Corporate Pick</span>
+            </div>
+            <!-- Course 3 -->
+            <div class="courseCard">
+                <div class="courseIcon"><i class="fa-solid fa-calculator"></i></div>
+                <h3>Tally & GST</h3>
+                <p class="courseSummary"><strong>Summary:</strong> Double-entry bookkeeping ledger management, inventory
+                    auditing, and tax compliance filings.</p>
+                <p class="courseDetails">Comprehensive training in modern digital bookkeeping, ledger setup, corporate
+                    inventory management, payroll processing, and accurate GST structure calculations or return filings.
+                </p>
+                <span class="badge">Professional</span>
+            </div>
+            <!-- Course 4 -->
+            <div class="courseCard">
+                <div class="courseIcon"><i class="fa-solid fa-user-shield"></i></div>
+                <h3>ADCA</h3>
+                <p class="courseSummary"><strong>Summary:</strong> Extended program blending administrative tools,
+                    graphics adjustments, and computer system protocols.</p>
+                <p class="courseDetails">Advanced Diploma covering office systems, database structuring via Access,
+                    advanced web surfing, multimedia graphics layout engineering, and system configuration
+                    configurations.</p>
+                <span class="badge">Full Diploma</span>
+            </div>
+            <!-- Course 5 -->
+            <div class="courseCard">
+                <div class="courseIcon"><i class="fa-solid fa-laptop"></i></div>
+                <h3>DCA</h3>
+                <p class="courseSummary"><strong>Summary:</strong> Core foundational tracking designed to introduce
+                    users to basic commercial computing routines.</p>
+                <p class="courseDetails">Diploma in Computer Applications spanning fundamental OS management, document
+                    formatting, spreadsheet accounting basics, presentations, and general local system protection tools.
+                </p>
+                <span class="badge">Foundation</span>
+            </div>
+            <!-- Course 6 -->
+            <div class="courseCard">
+                <div class="courseIcon"><i class="fa-solid fa-globe"></i></div>
+                <h3>Internet & Basics</h3>
+                <p class="courseSummary"><strong>Summary:</strong> Quick entry course managing web communications,
+                    research tasks, and digital safety habits.</p>
+                <p class="courseDetails">Essential digital literacy detailing structured browser setups, cloud file
+                    storage systems, secure email configurations, search strategies, and protection from malicious
+                    content.</p>
+                <span class="badge">Essentials</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Contact Page Section -->
+    <section id="contact" class="contactSection">
+        <div class="sectionTitle">
+            <h2>Get In Touch With Us</h2>
+            <p>Have questions? Drop by our center, send an email, or complete a quick request.</p>
+        </div>
+
+        <div class="contactContainer">
+            <!-- Contact Card Details -->
+            <div class="contactInfoCard">
+                <h3>Contact Information</h3>
+                <p>We are available to answer your technical career and admission queries throughout the week.</p>
+
+                <div class="infoDetailRow">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h5>Our Campus</h5>
+                        <p>Next Gen Computer Institute, Near by Police station Kharkahuda Meerut 245206, Uttar Pradesh, India</p>
+                    </div>
+                </div>
+
+                <div class="infoDetailRow">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h5>Call Support</h5>
+                        <p>+91 9105776291  / 9045263518 </p>
+                    </div>
+                </div>
+
+                <div class="infoDetailRow">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h5>Email Desk</h5>
+                        <p>institutenextgen@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="infoDetailRow">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h5>Office Hours</h5>
+                        <p>Monday - Saturday: 08:00 AM - 07:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Embedded Map Display Layout -->
+            <div class="mapCard">
+                <!-- Replace src link with your actual Google Maps embed link if desired -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d218.43557303159022!2d77.7437293345599!3d28.839777913066154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1783090580719!5m2!1sen!2sin" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="footerContainer">
+            <div class="footerInfo">
+                <h3>NXT<span class="highlight">GEN</span></h3>
+                <p>Guiding you toward career excellence with modern computing knowledge paths.</p>
+                <div class="socials">
+                 
+                    <a href="https://www.instagram.com/nxtgen.institute.kharkhauda?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/919105776291" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footerLinks">
+                <h4>Quick Action Links</h4>
+                <ul>
+                    <li><a href="#home">Back to Top</a></li>
+                    <li><a href="#about">About Director</a></li>
+                    <li><a href="#courses">Course Programs</a></li>
+                    <li><a href="#contact">Locate Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2026 Next Gen Computer Institute. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Admissions Modal (Popup Form) -->
+    <div class="modalOverlay" id="enrollModal">
+        <div class="modalBox">
+            <div class="modalClose" id="closeModalBtn">&times;</div>
+            <h3>Quick Admission Form</h3>
+            <p>Leave your details and our career counselor will call you back within 24 hours.</p>
+            <form id="admissionForm">
+                <div class="formGroup">
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName" required placeholder="Enter your full name">
+                </div>
+                <div class="formGroup">
+                    <label for="studentPhone">Phone Number</label>
+                    <input type="tel" id="studentPhone" required placeholder="9045263518">
+                </div>
+                <div class="formGroup">
+                    <label for="courseSelect">Select Course</label>
+                    <select id="courseSelect" required>
+                        <option value="">-- Choose a Course --</option>
+                        <option value="Coding Languages">Coding Languages</option>
+                        <option value="Advanced Excel">Advanced Excel</option>
+                        <option value="Tally & GST">Tally & GST</option>
+                        <option value="ADCA">ADCA</option>
+                        <option value="DCA">DCA</option>
+                        <option value="Internet & Basics">Internet & Basics</option>
+                    </select>
+                </div>
+                <button type="submit" class="submitBtn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
